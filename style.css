@@ -9,7 +9,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav-bottom button {
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bottom button{
     border: none;
     background-color: transparent;
 
@@ -25,14 +30,15 @@ body {
     padding-bottom: 10px;
 }
 
-.nav-bottom,
-.nav-top {
+.nav-bottom {
     flex-shrink: 0;
     color: white;
 }
 
 main {
     flex-grow: 1;
+
+    align-self: center;
 }
 
 .nav-bottom {
@@ -97,4 +103,55 @@ main {
 
 .nav-bottom i {
     font-size: 1.5rem;
+}
+
+/* Nav-top */
+.nav-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.nav-top button {
+    border: none;
+    border-radius: 5px;
+
+    background-color: #4a4a4a;
+    color: white;
+
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+
+.users-container {
+    width: 80vw;
+
+    max-width: 1420px;
+    height: 70vh;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 1rem;
+}
+
+.user {
+    position: relative;
+
+    flex-basis: calc((100% / 7) - (.2rem * 2));
+
+    margin: .2rem;
+
+    background-image: url(https://picsum.photos/300/200);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.user-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #4a4a4aa9;
+    color: white;
+    padding: 5px;
 }
