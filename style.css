@@ -45,6 +45,7 @@ main {
     align-self: center;
 
     padding: 2vw 0;
+    overflow: auto;
 }
 
 .nav-bottom {
